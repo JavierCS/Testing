@@ -58,7 +58,6 @@ final class BoolInitTestCase: XCTestCase {
         XCTAssertTrue(boolFromTrueByte)
         
         let invalidByte = data[2]
-        let boolFromInvalidByte = try XCTUnwrap(Bool(bit: invalidByte))
-        
+        XCTAssertNil(Bool(bit: invalidByte))
     }
 }
